@@ -1,0 +1,20 @@
+name: variant-calling-pipeline
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12
+  - bwa=0.7.17
+  - samtools=1.19
+  - bcftools=1.19
+  - gatk4=4.7.0.0
+  - snakemake=9.26
+  - matplotlib
+  - pandas
+  - numpy
+  # Note: this project was built and tested using GATK4 installed directly
+  # from the official GitHub release (broadinstitute/gatk 4.7.0.0) rather
+  # than the bioconda package. If the bioconda gatk4 build is unavailable
+  # or a different version, download the release directly from
+  # https://github.com/broadinstitute/gatk/releases

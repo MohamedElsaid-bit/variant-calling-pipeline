@@ -1,0 +1,89 @@
+Using GATK jar /home/claude/tools/gatk-4.7.0.0/gatk-package-4.7.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /home/claude/tools/gatk-4.7.0.0/gatk-package-4.7.0.0-local.jar VariantFiltration -R data/reference/chr21.fasta -V results/vcf/raw_snps.vcf.gz --filter-expression QD < 2.0 --filter-name QD2 --filter-expression FS > 60.0 --filter-name FS60 --filter-expression MQ < 40.0 --filter-name MQ40 --filter-expression MQRankSum < -12.5 --filter-name MQRankSum-12.5 --filter-expression ReadPosRankSum < -8.0 --filter-name ReadPosRankSum-8 --filter-expression SOR > 3.0 --filter-name SOR3 -O results/vcf/filtered_snps.vcf.gz
+19:23:16.513 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/home/claude/tools/gatk-4.7.0.0/gatk-package-4.7.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+19:23:16.725 INFO  VariantFiltration - ------------------------------------------------------------
+19:23:16.732 INFO  VariantFiltration - The Genome Analysis Toolkit (GATK) v4.7.0.0
+19:23:16.732 INFO  VariantFiltration - For support and documentation go to https://software.broadinstitute.org/gatk/
+19:23:16.732 INFO  VariantFiltration - Executing as root@vm on Linux v6.18.44-fc-v22 amd64
+19:23:16.732 INFO  VariantFiltration - Java runtime: OpenJDK 64-Bit Server VM v21.0.10+7-Ubuntu-124.04
+19:23:16.733 INFO  VariantFiltration - Start Date/Time: September 1, 2026, 7:23:16 PM UTC
+19:23:16.733 INFO  VariantFiltration - ------------------------------------------------------------
+19:23:16.733 INFO  VariantFiltration - ------------------------------------------------------------
+19:23:16.734 INFO  VariantFiltration - HTSJDK Version: 5.0.0
+19:23:16.734 INFO  VariantFiltration - Picard Version: 3.5.0
+19:23:16.734 INFO  VariantFiltration - Built for Spark Version: 3.5.0
+19:23:16.740 INFO  VariantFiltration - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+19:23:16.740 INFO  VariantFiltration - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+19:23:16.740 INFO  VariantFiltration - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+19:23:16.740 INFO  VariantFiltration - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+19:23:16.740 INFO  VariantFiltration - Deflater: IntelDeflater
+19:23:16.740 INFO  VariantFiltration - Inflater: IntelInflater
+19:23:16.741 INFO  VariantFiltration - GCS max retries/reopens: 20
+19:23:16.741 INFO  VariantFiltration - Requester pays: disabled
+19:23:16.741 INFO  VariantFiltration - Initializing engine
+19:23:16.968 INFO  FeatureManager - Using codec VCFCodec to read file file:///home/claude/variant-calling-pipeline/results/vcf/raw_snps.vcf.gz
+19:23:17.022 INFO  VariantFiltration - Done initializing engine
+19:23:17.121 INFO  ProgressMeter - Starting traversal
+19:23:17.121 INFO  ProgressMeter -        Current Locus  Elapsed Minutes    Variants Processed  Variants/Minute
+19:23:17.172 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+19:23:17.172 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+19:23:17.191 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+19:23:17.191 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+19:23:17.193 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+19:23:17.193 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+19:23:17.194 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+19:23:17.194 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+19:23:17.203 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+19:23:17.204 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+19:23:17.205 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+19:23:17.205 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+19:23:17.206 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+19:23:17.206 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+19:23:17.206 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+19:23:17.206 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+19:23:17.212 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+19:23:17.212 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+19:23:17.213 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+19:23:17.213 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+19:23:17.214 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+19:23:17.214 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+19:23:17.219 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+19:23:17.219 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+19:23:17.221 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+19:23:17.221 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+19:23:17.222 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+19:23:17.222 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+19:23:17.227 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+19:23:17.227 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+19:23:17.227 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+19:23:17.227 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+19:23:17.229 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+19:23:17.229 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+19:23:17.230 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+19:23:17.230 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+19:23:17.230 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+19:23:17.230 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+19:23:17.231 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+19:23:17.240 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+19:23:17.241 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+19:23:17.241 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+19:23:17.242 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+19:23:17.242 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+19:23:17.248 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+19:23:17.248 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+19:23:17.249 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+19:23:17.249 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+19:23:17.250 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+19:23:17.250 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+19:23:17.256 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+19:23:17.256 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+19:23:17.259 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+19:23:17.259 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+19:23:17.260 WARN  JexlEngine - ![0,9]: 'MQRankSum < -12.5;' undefined variable MQRankSum
+19:23:17.260 WARN  JexlEngine - ![0,14]: 'ReadPosRankSum < -8.0;' undefined variable ReadPosRankSum
+19:23:17.261 INFO  ProgressMeter -             unmapped              0.0                    86          36857.1
+19:23:17.261 INFO  ProgressMeter - Traversal complete. Processed 86 total variants in 0.0 minutes.
+19:23:17.273 INFO  VariantFiltration - Shutting down engine
+[September 1, 2026, 7:23:17 PM UTC] org.broadinstitute.hellbender.tools.walkers.filters.VariantFiltration done. Elapsed time: 0.01 minutes.
+Runtime.totalMemory()=64946176

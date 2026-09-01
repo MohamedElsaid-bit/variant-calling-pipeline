@@ -1,0 +1,8 @@
+Using GATK jar /home/claude/tools/gatk-4.7.0.0/gatk-package-4.7.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /home/claude/tools/gatk-4.7.0.0/gatk-package-4.7.0.0-local.jar MergeVcfs -I results/vcf/filtered_snps.vcf.gz -I results/vcf/filtered_indels.vcf.gz -O results/vcf/final_filtered.vcf.gz
+19:23:30.978 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/home/claude/tools/gatk-4.7.0.0/gatk-package-4.7.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+[Tue Sep 01 19:23:31 UTC 2026] MergeVcfs --INPUT results/vcf/filtered_snps.vcf.gz --INPUT results/vcf/filtered_indels.vcf.gz --OUTPUT results/vcf/final_filtered.vcf.gz --VERBOSITY INFO --QUIET false --VALIDATION_STRINGENCY STRICT --COMPRESSION_LEVEL 2 --MAX_RECORDS_IN_RAM 500000 --CREATE_INDEX true --CREATE_MD5_FILE false --help false --version false --showHidden false --USE_JDK_DEFLATER false --USE_JDK_INFLATER false
+[Tue Sep 01 19:23:31 UTC 2026] Executing as root@vm on Linux 6.18.44-fc-v22 amd64; OpenJDK 64-Bit Server VM 21.0.10+7-Ubuntu-124.04; Deflater: Intel; Inflater: Intel; Provider GCS is available; Picard version: Version:4.7.0.0
+[Tue Sep 01 19:23:31 UTC 2026] picard.vcf.MergeVcfs done. Elapsed time: 0.01 minutes.
+Runtime.totalMemory()=64946176

@@ -1,0 +1,24 @@
+# Raw and large intermediate genomic files (regenerate via Snakefile, see README)
+# The full-size FASTQs are ignored; a small labeled example subset is committed
+# at data/raw/example_subset/ so the repo is browsable without a download step.
+data/raw/*.fastq.gz
+data/reference/*.fasta
+data/reference/*.fasta.*
+data/reference/*.dict
+data/known_sites/*.vcf.gz
+data/known_sites/*.vcf.gz.tbi
+
+results/bam/*.bam
+results/bam/*.bam.bai
+results/bam/*.bai
+
+# Keep small committed outputs (VCFs, tables, figures) - do not ignore results/vcf, results/tables, results/figures
+
+# Environment / tooling
+.snakemake/
+tools/
+*.pyc
+__pycache__/
+
+# OS
+.DS_Store
